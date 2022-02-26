@@ -1,1 +1,1 @@
-Hello, this is Zeyu's assignment for day1.
+Hello, this is Zeyu's assignment submission board.
