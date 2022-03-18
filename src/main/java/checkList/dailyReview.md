@@ -302,3 +302,97 @@ Combine with annotations, using reflection api can achieve lots of framework job
 	- Java8 new feature stream API
 	- Hibernate
 	- web application materials
+## 3.17
+
+- What have you reviewed today? 
+	- B tree and B+ tree
+		- B-Tree is known as a self-balancing tree as its nodes are sorted in the inorder traversal. In B-tree, a node can have more than two children. B-tree has a height of logM N (Where ‘M’ is the order of tree and N is the number of nodes). And the height is adjusted automatically at each update. In the B-tree data is sorted in a specific order, with the lowest value on the left and the highest value on the right. To insert the data or key in B-tree is more complicated than a binary tree.
+		- There are some conditions that must be hold by the B-Tree:
+			- All the leaf nodes of the B-tree must be at the same level.
+			- Above the leaf nodes of the B-tree, there should be no empty sub-trees.
+			- B- tree’s height should lie as low as possible.
+		- ![image](https://user-images.githubusercontent.com/57826324/158929223-26ac08ce-73a5-4da4-9417-ab056760fad6.png)
+		- B+ tree eliminates the drawback B-tree used for indexing by storing data pointers only at the leaf nodes of the tree. Thus, the structure of leaf nodes of a B+ tree is quite different from the structure of internal nodes of the B tree. It may be noted here that, since data pointers are present only at the leaf nodes, the leaf nodes must necessarily store all the key values along with their corresponding data pointers to the disk file block, in order to access them. Moreover, the leaf nodes are linked to providing ordered access to the records. The leaf nodes, therefore form the first level of the index, with the internal nodes forming the other levels of a multilevel index. Some of the key values of the leaf nodes also appear in the internal nodes, to simply act as a medium to control the searching of a record.
+		- ![image](https://user-images.githubusercontent.com/57826324/158929382-f0c2c182-bfb1-4566-996a-5331a3921f67.png)
+	- stream API
+	- Introduced in Java 8, the Stream API is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
+	```java
+	public static void main(String args[])
+  {
+  
+    // create a list of integers
+    List<Integer> number = Arrays.asList(2,3,4,5);
+  
+    // demonstration of map method
+    List<Integer> square = number.stream().map(x -> x*x).
+                           collect(Collectors.toList());
+    System.out.println(square);
+  
+    // create a list of String
+    List<String> names =
+                Arrays.asList("Reflection","Collection","Stream");
+  
+    // demonstration of filter method
+    List<String> result = names.stream().filter(s->s.startsWith("S")).
+                          collect(Collectors.toList());
+    System.out.println(result);
+  
+    // demonstration of sorted method
+    List<String> show =
+            names.stream().sorted().collect(Collectors.toList());
+    System.out.println(show);
+  
+    // create a list of integers
+    List<Integer> numbers = Arrays.asList(2,3,4,5,2);
+  
+    // collect method returns a set
+    Set<Integer> squareSet =
+         numbers.stream().map(x->x*x).collect(Collectors.toSet());
+    System.out.println(squareSet);
+  
+    // demonstration of forEach method
+    number.stream().map(x->x*x).forEach(y->System.out.println(y));
+  
+    // demonstration of reduce method
+    int even =
+       number.stream().filter(x->x%2==0).reduce(0,(ans,i)-> ans+i);
+  
+    System.out.println(even);
+  }
+- What new things you have learned today?
+	- OSI model
+		- 7 application layer
+human computer interaction layer, where application can access the network services
+HTTP, (Hypertext Transfer Protocol)
+FTP, File Transfer Protocol
+POP, Post Office Protocol
+SMTP, Simple Mail Transfer Protocol
+DNS, Domain Name System
+
+		- 6, Presentation Layer,
+ensure that data is in usable format an dis where data encryption occurs
+
+		- 5, Session 
+maintain connection and is for controlling ports and sessions
+
+		- 4, transport
+transmits data using transmission protocols: TCP, UDP
+
+		- 3, network
+decides which physical path the data will take
+
+		- 2, data link layer
+define the format of data on the network
+
+		- 1, physical layer,
+transmit raw bit stream voer physical medium
+
+	- TCP/IP model
+	- <img width="574" alt="image" src="https://user-images.githubusercontent.com/57826324/158930216-b5356138-c3c1-4ded-aec9-403cf87c83ad.png">
+
+	- HTTP
+	- <img width="698" alt="image" src="https://user-images.githubusercontent.com/57826324/158930297-e0c403b4-9beb-4c7e-abae-8b96147e4b83.png">
+
+- What is your learning plan tomorrow?
+	- stream API
+	- keep learning on web application
