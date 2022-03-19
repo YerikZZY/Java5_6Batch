@@ -394,5 +394,38 @@ transmit raw bit stream voer physical medium
 	- <img width="698" alt="image" src="https://user-images.githubusercontent.com/57826324/158930297-e0c403b4-9beb-4c7e-abae-8b96147e4b83.png">
 
 - What is your learning plan tomorrow?
-	- stream API
+	- Hibernate
 	- keep learning on web application
+## 3.18
+
+- What have you reviewed today?
+	- Hibernate
+	- Hibernate is an open source object relational mapping (ORM) tool that provides a framework to map object-oriented domain models to relational databases for web applications. Object relational mapping is based on the containerization of objects and the abstraction that provides that capacity.
+	- <img width="608" alt="image" src="https://user-images.githubusercontent.com/57826324/159104128-35b89277-7435-4b31-8b07-ac2299860e2f.png">
+	- config file
+	- <img width="622" alt="image" src="https://user-images.githubusercontent.com/57826324/159104143-40aa2376-cd50-482f-96e3-6ddecc3b6a18.png">
+	- session fectory
+	- <img width="618" alt="image" src="https://user-images.githubusercontent.com/57826324/159104156-5089a1e2-1be9-4786-a906-e2c9dca7a72a.png">
+	- entity
+	- <img width="609" alt="image" src="https://user-images.githubusercontent.com/57826324/159104177-be042da7-381f-4e23-a583-a043f4513829.png">
+	- session
+	- <img width="598" alt="image" src="https://user-images.githubusercontent.com/57826324/159104202-5744e44d-ceb3-4f0a-a4d4-34958b1e6f74.png">
+- What new things you have learned today?
+	- The whole process for building a java web application
+	- <img width="618" alt="image" src="https://user-images.githubusercontent.com/57826324/159104245-0f4febbb-9ceb-4f11-a6bb-cf00aaceab5b.png">
+	- tomecat files in linux system(you can also build it in different system, but the linux is the most popular one.
+		- bin: startup, shutdown and other scripts and executables
+		- common: common classes that catalina and web app can use
+		- conf: config file
+		- logs: app logs
+		- temp: temporary variable and files
+		- webapps: contains the web application
+		- work: temporary storage
+	- servlet lifecycle
+	- <img width="358" alt="image" src="https://user-images.githubusercontent.com/57826324/159104312-b12f778d-b4fe-436e-ba05-da6d3be0be69.png">
+	- MVC arcitecture
+	- sessions and cookies
+- What is your learning plan tomorrow?
+	- keep reviewing rest of Hibernate
+	- get familiar with the whole process of java web application
+	- tomcat, servlet, JEE
