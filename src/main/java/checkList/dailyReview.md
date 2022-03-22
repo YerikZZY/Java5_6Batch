@@ -429,3 +429,65 @@ transmit raw bit stream voer physical medium
 	- keep reviewing rest of Hibernate
 	- get familiar with the whole process of java web application
 	- tomcat, servlet, JEE
+
+## 3.21
+
+- What have you reviewed today?
+	- Servlet
+	- Servlets are the Java programs that run on the Java-enabled web server or application server. They are used to handle the request obtained from the webserver, process the request, produce the response, then send a response back to the webserver. 
+Properties of Servlets are as follows:
+		- Servlets work on the server-side.
+		- Servlets are capable of handling complex requests obtained from the webserver.
+	- <img width="963" alt="image" src="https://user-images.githubusercontent.com/57826324/159387384-ec097755-bd2c-4466-902e-e97ebe49a712.png">
+	- Execution of Servlets basically involves six basic steps: 
+
+		- The clients send the request to the webserver.
+		- The web server receives the request.
+		- The web server passes the request to the corresponding servlet.
+		- The servlet processes the request and generates the response in the form of output.
+		- The servlet sends the response back to the webserver.
+		- The web server sends the response back to the client and the client browser displays it on the screen.
+	- lambda expresion
+	- Lambda is introduced from Java 8 to implify the creation of objects from funcitonal interfaces.
+Since all the functional interfaces have only 1 abstract method, the lambda acually is used to represent the implementation of that only 1 method.
+Lambda doesn't have name, the parameter list and return type define the lambda.
+Lambda looks like this:
+() -> {}
+() part is the parameter list of the abstract method.
+{} is the body of the abstract method.
+	- functional Interface
+		- Functional interface is a kind of interface that has only 1 abstract method.
+		- Functional interface can have multiple default methods and static methods.
+		- for example:
+```java
+
+@FunctionalInterface // annotation is optional
+public interface Doable {
+
+  // this is the only abstract method. It doesn't have body.
+  int doIt(String event);
+
+  default int defaultMethodDemo1(){ // this is a default method, it has body.
+    System.out.println("This is Java");
+  }
+
+  static int staticMethodDemo2() {. // this is a static method, it has body.
+    System.out.println("Static");
+  }
+  
+}
+
+```
+- What new things you have learned today?
+	- Spring
+		- IoC(Inversion of Control)
+		- Refers to the core container that uses the DI or IoC pattern to implicitly provide an object reference in a class during runtime. This pattern acts as an alternative to the service locator pattern. The IoC container contains assembler code that handles the configuration management of application objects.
+The Spring framework provides two packages, namely org.springframework.beans and org.springframework.context which helps in providing the functionality of the IoC container.
+	- why spring use dependency injection?
+	- Dependency injection supports these goals by decoupling the creation of the usage of an object. That enables you to replace dependencies without changing the class that uses them. It also reduces the risk that you have to change a class just because one of its dependencies changed.
+	- <img width="167" alt="Screen Shot 2022-03-21 at 14 32 44" src="https://user-images.githubusercontent.com/57826324/159400702-c80603a1-b016-48ef-8d9c-694bd7c6d8e9.png">
+	- springboot layout
+	- controller -> service -> DAO
+- What is your learning plan tomorrow?
+	- how to create Spring and Servlet projects
+	- sharpen understanding in spring
