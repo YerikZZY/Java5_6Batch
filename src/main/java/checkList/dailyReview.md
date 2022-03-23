@@ -491,3 +491,37 @@ The Spring framework provides two packages, namely org.springframework.beans and
 - What is your learning plan tomorrow?
 	- how to create Spring and Servlet projects
 	- sharpen understanding in spring
+## 3.21
+
+- What have you reviewed today?	
+	- lifecycle of multi-thread
+		- New − A new thread begins its life cycle in the new state. It remains in this state until the program starts the thread. It is also referred to as a born thread.
+		- Runnable − After a newly born thread is started, the thread becomes runnable. A thread in this state is considered to be executing its task.
+		- Waiting − Sometimes, a thread transitions to the waiting state while the thread waits for another thread to perform a task. A thread transitions back to the runnable state only when another thread signals the waiting thread to continue executing.
+		- Timed Waiting − A runnable thread can enter the timed waiting state for a specified interval of time. A thread in this state transitions back to the runnable state when that time interval expires or when the event it is waiting for occurs.
+		- Terminated (Dead) − A runnable thread enters the terminated state when it completes its task or otherwise terminates.
+	- four ways to create a thread: extends thread class, implaments runnable, implements callable, threadPoolExcuter
+	- Thread pool 
+		- Threadpool is a collection of pre-initialized, idle threads that are ready to be given task. The Threads don't terminate rightaway when the tasks are done, when one thread completes the work, the thread becomes idle, ready to be dispatched to another task.
+	- ![Picture1](https://user-images.githubusercontent.com/57826324/159596337-b690aaca-6280-421c-b191-6cd3c5b4372c.png)
+	- there are 5 thread in the thread pool, in the core part, we have 2 running thread and there are extra 3 thread area inside the thread pool. out side the thread pool, we have a queue for other threads, there are 4 spaces for up coming thread. abort policy, callerRunPolicy, discardPolicy, and discardOldestPolicy
+	- Thread Communication
+		- lock
+		- volatile keyword
+		- wait/notify
+- What new things you have learned today?
+	- agile style
+	- In software development, agile (sometimes written Agile) practices include requirements discovery and solutions improvement through the collaborative effort of self-organizing and cross-functional teams with their customer(s)/end user(s),adaptive planning, evolutionary development, early delivery, continual improvement, and flexible responses to changes in requirements, capacity, and understanding of the problems to be solved.
+Popularized in the 2001 Manifesto for Agile Software Development, these values and principles were derived from and underpin a broad range of software development frameworks, including Scrum and Kanban.
+	- waterfall style
+	- The waterfall model is a breakdown of project activities into linear sequential phases, where each phase depends on the deliverables of the previous one and corresponds to a specialization of tasks. The approach is typical for certain areas of engineering design. In software development, it tends to be among the less iterative and flexible approaches, as progress flows in largely one direction ("downwards" like a waterfall) through the phases of conception, initiation, analysis, design, construction, testing, deployment and maintenance.
+	- sprint style
+	- one sprint is about 1 or 2 weeks, in each sprint, we have tickets about project, tech lead or cto will decide each tickets score and assign to developer
+	- stand up stratge
+	- agile tools
+		- KANBAN, pivotal, JIRA
+	- CI/CD(continue intergration, continue deployment)
+	- new a document in checklist for CICD
+- What is your learning plan tomorrow?
+	- servlet project creation flow
+	- Collection review
