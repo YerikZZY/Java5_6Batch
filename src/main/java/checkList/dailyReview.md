@@ -491,7 +491,7 @@ The Spring framework provides two packages, namely org.springframework.beans and
 - What is your learning plan tomorrow?
 	- how to create Spring and Servlet projects
 	- sharpen understanding in spring
-## 3.21
+## 3.22
 
 - What have you reviewed today?	
 	- lifecycle of multi-thread
@@ -525,3 +525,61 @@ Popularized in the 2001 Manifesto for Agile Software Development, these values a
 - What is your learning plan tomorrow?
 	- servlet project creation flow
 	- Collection review
+
+## 3.23
+
+- What have you reviewed today?
+	- ArrayList vs LinkedList
+	-  ArrayList is implemented based on a dynamically resizable array; linked list is based on a linear data structure in which elements are not stored in a contiguous memory location, each element is linked using pointers.
+for get operation, ArrayList is faster than LinkedList, because we can access element by index, linked list however, need to be traversed by pointers to access an element
+for add and remove operations, LinkedList is faster than ArrayList because ArrayList might need to ensure the array capacity and copy the array internally,
+ArrayList -> add: O(1) at best, O(n) at worst; remove(): O(n)
+LinkedList -> add(): O(1) add(index, elem): O(n); remove():O(n)
+	- HashMap
+	- Hashmap is a data structure that stores key-value mapping pairs, internally it converts each key to a hashcode which is stored inside a bucket of an array with default size of 16.
+HashMap is internally implemented using array + linked list + redblacktree (jdk1.8 added redblacktree). When linked list size is at TREEIFY_THRESHOLD (>8), it would convert the linked list to a redblacktree, when nodes of redblacktree is less than UNTREEIFY_THRESHOLD (<6), it would convert back to linkedlist.
+	- HashMap vs HashTable
+	- They both implement the Map interface.
+HashMap allows one null key and multiple null values whereas Hashtable doesn't allow any null key or value.
+HashTable is thread-safe, while HashMap is not.( synchronized vs unsynchronized)
+	- HashMap vs concurrentHashMap
+	- Instead of locking the whole map like HashTable, ConcurrentHashMap allows concurrent read and thread-safe update operations. To perform read operation thread won’t require any lock but to perform update operation thread require a lock, but it is the lock of a bucket, by default ConcurrentHashMap maintain 16 locks for a map.
+	- LinkedHashMap
+	- LinkedHashMap is a map data structure whose keys are preserved in insertion order, internally implemented by the doubly linked list, which means each node entry has two more pointers which point to the previous node and the next node to track the insertion order.
+	- TreeMap
+	- TreeMap is a map data structure whose keys are ordered by natural ordering or a comparator. It has O(logn) lookup and insertion time. Internally it is implemented by a red black tree.
+- What new things you have learned today?
+	- Spring AOP
+	- Aspect oriented programming 
+In AOP, aspects enable the modularization of concerns such as transaction management, logging or security that cut across multiple types and objects (cross cutting corners)
+	- Key Terminology
+
+		- Aspect: 
+an aspect is a class that implements enterprise application concerns that cut across multiple classes, such as transaction management, logging, security
+Aspect are implemented regular classes using Spring XML configuration
+Regular classes annotated with @Aspect annotation (@AspectJ style)
+
+
+		- Join Point: 
+a point during the execution of a program, such as the execution of a method or the handling of an exception 
+
+		- PointCut:
+a predicate that matches join points, 
+Advice is associated with a pointcut expression and runs at any join point matched by the pointcut
+SPring framework uses the AspectJ Pointcut expression language
+
+
+		- Advice
+before: advices that executes before a join point
+after: advice to be executed regardless of the means by which a join point exits (normal or exceptional return)
+after return: advice to be executed after a join point completes
+after throwing: advice to be executed if a method exits by throwing an exception
+around: advice that surrounds a join point such as a method invocation
+
+
+	- controller -> service -> DAO (repository) -> connect database
+	- finish one spring AOP demo and push it to a new repo on github
+
+- What is your learning plan tomorrow?
+	- keep reviewing spring framework
+	- get deeper in Spring IOC and Spring AOP
