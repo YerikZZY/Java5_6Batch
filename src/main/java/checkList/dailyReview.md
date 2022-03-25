@@ -583,3 +583,56 @@ around: advice that surrounds a join point such as a method invocation
 - What is your learning plan tomorrow?
 	- keep reviewing spring framework
 	- get deeper in Spring IOC and Spring AOP
+
+## 3.24
+
+- What have you reviewed today?
+	- heap vs stack in jvm
+		- stack is used to store the order of method execution and local variables while the heap memory stores the objects and it uses dynamic memory allocation and deallocation.
+	- can we force gc
+		- Call the System. gc() command.
+		- Call the getRuntime(). gc() command.
+		- Use the jmap command.
+		- Use the jcmd command.
+		- Use JConsole or Java Mission Control.
+	- JVM: Platform for executing the Java byte code.
+	- JRE: JRE = Java Virtual Machine (JVM) + Libraries to run the application
+	- JDK:Java Runtime Environment (JRE) + Development tools
+	- Constructor: is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes
+	- getter/setter: getter and setter are two conventional methods that are used for retrieving and updating value of a variable. By using getter and setter, the programmer can control how his important variables are accessed and updated in a correct manner, such as changing value of a variable within a specified range.
+- What new things you have learned today?
+	- Spring MVC
+	- MVC
+	- ![Picture1](https://user-images.githubusercontent.com/57826324/160056493-23d3d9cc-3554-40cf-b9e3-24e9e8c6d06a.png)
+		- model: contains the data of the application
+		- controller: business logic of application. @Controller
+		- View: web pages, JSP
+		- front controller: in Spring MVC, dispatcher servlet
+	- ![Picture2](https://user-images.githubusercontent.com/57826324/160056824-e20ecdf3-0c58-46d1-80f4-8e205cdc7168.png)
+
+	- all incoming request is intercepted by the dispatcherServlet that work as the front controller
+	- the dispatcherServlet gets an entry of handler mapping form the xml file and forwards the request to the controller
+	- the controller return an object of ModelAndView
+	- the dispatcherServlet checks the entry of the view resolver in xml file and invokes the specified view component.
+	- spring boot
+		- advantage
+provide a flexible way to config the java beans, xml configuration and database transactions
+batch processing and manage rest endpoints
+everything is auto configed 
+annotation based spring application
+eases dependency management
+include embedded servlet container -> Tomcat
+	- Rest API Design
+		- http method, http status code, http url design
+	- Spring RESTful API
+		- @RestController, @Controller, @Service, @Repsoitory,
+@GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestMapping, 
+@PathVariable, @RequestParam
+@RequestBody, @ResponseBody
+
+	- Exception Handling
+	- ![Picture3](https://user-images.githubusercontent.com/57826324/160057343-4f753886-5719-49b0-9190-22db338eb433.png)
+
+- What is your learning plan tomorrow?
+	- Keep reviewing the rest demo project
+	- make sure each line of the code that I can understand.
