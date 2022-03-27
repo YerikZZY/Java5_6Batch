@@ -636,3 +636,44 @@ include embedded servlet container -> Tomcat
 - What is your learning plan tomorrow?
 	- Keep reviewing the rest demo project
 	- make sure each line of the code that I can understand.
+
+## 3.25
+
+- What have you reviewed today?
+	- Spring different layer
+	- ![image](https://user-images.githubusercontent.com/57826324/160291569-c18ee3eb-285a-4219-b409-8aa49d1ce52d.png)
+
+		- controller
+		- Controller is the interface that interacts with the outside world. It handles incoming HTTP requests and send response back to the caller. Based on the incoming request URL and HTTP verb (GET/POST/PUT/PATCH/DELETE), API decides which controller and action method to execute e.g. Get() method will handle HTTP GET request, Post() method will handle HTTP POST request, Put() method will handle HTTP PUT request and Delete() method will handle HTTP DELETE request for the above Web API.
+		- service
+		- service is the utility that defines the business logic of the application.
+		- DAO
+		- DAO or Data Access Object is used to interact with the database directly.
+		- entity(database)
+	- Restful API
+		- @RestController
+		- @Controller
+		- @Service
+		- @Repsoitory
+		- @GetMapping, @PostMapping, @PutMapping,@PatchMapping, @DeleteMapping, @RequestMapping
+		- @PathVariable, @RequestParam
+		- @RequestBody, @ResponseBody
+- What new things you have learned today?
+	- HTTP Status code
+	- 200	ok; 201	created, Post, Put; 202	accepted; 204	no content; 400	bad request; 401	unauthorized; 403	forbidden; 404	not found; 405	method not allowed; 500	internal server error; 501	not implemented
+	- URL design
+	- basic, use "/" to seprate layers
+	- use "?" to implement different methods. filtering, sorting, searching
+	- exception handling
+		- @ExceptionHandler for local exception handling
+		- @ControllerAdvice for global exception handling
+	- validation
+		- first way to deal with validation, we can manully write inline code for valid data;
+		- or we can use annotation that provided by spring framework to handle it
+		- @NotNull, @NotEmpty, @NotBlank, @Min, @Max, @Pattern, @Email …
+
+
+- What is your learning plan tomorrow?
+	- keep learning on Springboot and restful api, it is the most importent part of Spring
+	- read restful api demo code and fully understand it.
+	- JDBC and Haibernate review
