@@ -676,4 +676,79 @@ include embedded servlet container -> Tomcat
 - What is your learning plan tomorrow?
 	- keep learning on Springboot and restful api, it is the most importent part of Spring
 	- read restful api demo code and fully understand it.
-	- JDBC and Haibernate review
+	- JDBC and Hibernate review
+
+## 3.25
+
+- What have you reviewed today?
+	- JDBC
+	- JDBC Driver is a software component that enables java applications to interact with the database
+	- java application   < — >         JDBC driver          < — >               database
+	- A JDBC program comprises the following steps
+		- allocate a connection object, for connecting to the database
+		- allocate a statement object, based on the connection
+		- write sql query, execute query
+		- process the query result
+		- close the statement and connection object to free up the resources
+	- 1) Statement
+		- Statement interface is used to execute normal SQL queries. You can’t pass the parameters to SQL query at run time using this interface. This interface is preferred over other two interfaces if you are executing a particular SQL query only once. The performance of this interface is also very less compared to other two interfaces. In most of time, Statement interface is used for DDL statements like CREATE, ALTER, DROP etc.
+	- 2) PreparedStatement
+		- PreparedStatement is used to execute dynamic or parameterized SQL queries. PreparedStatement extends Statement interface. You can pass the parameters to SQL query at run time using this interface. It is recommended to use PreparedStatement if you are executing a particular SQL query multiple times. It gives better performance than Statement interface. Because, PreparedStatement are precompiled and the query plan is created only once irrespective of how many times you are executing that query. This will save lots of time.
+	- 3) CallableStatement
+		- CallableStatement is used to execute the stored procedures. CallableStatement extends PreparedStatement. Usng CallableStatement, you can pass 3 types of parameters to stored procedures. They are : IN – used to pass the values to stored procedure, OUT – used to hold the result returned by the stored procedure and IN OUT – acts as both IN and OUT parameter. Before calling the stored procedure, you must register OUT parameters using registerOutParameter() method of CallableStatement. The performance of this interface is higher than the other two interfaces. Because, it calls the stored procedures which are already compiled and stored in the database server.
+	- Hibernate
+	- ORM
+	- ![image](https://user-images.githubusercontent.com/57826324/160512564-f738f8da-d31f-446f-98eb-f86a97d23754.png)
+	- ![image](https://user-images.githubusercontent.com/57826324/160512638-c9f70804-20f7-4fa9-a768-aca28e74a005.png)
+	- Mapping
+		- One to One
+		- One to Many
+		- Many to One
+		- Many to Many
+	- restful api
+	- safe: get
+	- idempotent: get, put, delete
+	- cacheable: get, post
+
+- What new things you have learned today?
+	- Validation
+	```
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+
+
+- common validation annotations
+	- @NotNull, @NotEmpty, @NotBlank, @Min, @Max, @Pattern, @Email 
+	- Swagger
+	- swagger is an open source project used to generate the rest api documents for RESTful services.
+	```
+	
+@EnableSwagger2
+@Configuration
+public class SwaggerConfig {
+
+      @Bean
+      public Docket productApi() {
+          return new Docket(DocumentationType.SWAGGER_2)
+                  .select()
+                  .apis(RequestHandlerSelectors.basePackage("com.antra"))
+                  .paths(regex("/api.*"))
+                  .build().apiInfo(metaInfo());
+             
+      }
+     private ApiInfo metaInfo() {
+       
+        ApiInfo apiInfo=new ApiInfo("User Api", "User Api methods", "1.0", "Terms of Service", 
+	new Contact("Antra Inc","http://www.antra.net","abc@gmail.com"), "License for User Details ", "Url of user", Collections.EMPTY_LIST);
+    
+        return apiInfo;
+     }
+}
+
+
+- What is your learning plan tomorrow?
+	- review Database normalization
+	- MongoDB and Redis
+	- Spring framework fully review
