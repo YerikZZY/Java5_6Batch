@@ -678,7 +678,7 @@ include embedded servlet container -> Tomcat
 	- read restful api demo code and fully understand it.
 	- JDBC and Hibernate review
 
-## 3.25
+## 3.28
 
 - What have you reviewed today?
 	- JDBC
@@ -752,3 +752,60 @@ public class SwaggerConfig {
 	- review Database normalization
 	- MongoDB and Redis
 	- Spring framework fully review
+
+## 3.29
+
+- What have you reviewed today?
+	- JAR vs WAR
+        - JAR stands for Java Archive. JAR is zipped file containing the compressed versions of .class files and resources of compiled Java libraries and application which mean its for pure Java application.
+        - WAR stands for Web Application Resource. These archive files have the .war extension and are used to package web applications that we can deploy on any Servlet/JSP container.
+        - 1NF
+		- each table cell should contain a single value
+		- each record needs to be unique
+	- 2NF
+		- be in 1NF
+		- single column primary key
+	- 3NF
+		- be in 2NF
+		- has no transitive functional dependencies
+	- MongoDB
+	- ![image](https://user-images.githubusercontent.com/57826324/160737574-d1fca5ef-e0f8-496a-b4f5-171b2bdb12ba.png)
+	- Redis
+	- ![image](https://user-images.githubusercontent.com/57826324/160737617-40bd20c5-73a2-44a3-b5a7-f26745296a5f.png)
+	- Spring
+		- IOC/DI and AOP
+		- bean scope
+			- single (default), prototype, request, session, global session
+		- important annotations
+			- @Autowired, @Resource, @Component, @Scope(“singleton/prototype”), @Configuration, @ComponentScan(“package”), @Bean
+		- mvc
+			- model view controller, dispatcher servlet
+		- boot
+		- restful api annotation
+			- @RestController, @Controller, @Service, @Repsoitory,
+			- @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @RequestMapping, 
+			- @PathVariable, @RequestParam
+			- @RequestBody, @ResponseBody
+		- Lombok
+			- @Data, @AllArgsConstructor, @NoArgsConstructor
+		- Exception 
+			- @ExceptionHandler, @ControllerAdivce, @ResponseStatus
+		- Validation
+			- @NotNull, @NotEmpty, @NotBlank, @Min, @Max, @Pattern, @Email
+- What new things you have learned today?
+	- Authentication-username + password
+	- Authorization-role
+	- security-at rest / in transit username (password) (ssn) 
+	- Encryption
+	- Hashing
+	- Encoding
+	- 1.validate input controller
+	- 2.HTTP+Security(TLS > SSL)
+	- 3. Token - > JWT (Json web token)
+	- JWT
+		- Json Web Token, an encoded JSON data used for data exchange as "Token". It looks like a string, so can be used as a token.
+	- OAUTH2
+		- Open Authorization 2.0 It is a way to let users log in to a website/application using the 3rd party account
+- What is your learning plan tomorrow?
+	- review interview questions
+	- equals / hashcode
