@@ -809,3 +809,45 @@ public class SwaggerConfig {
 - What is your learning plan tomorrow?
 	- review interview questions
 	- equals / hashcode
+
+## 3.30
+
+- What have you reviewed today?
+	- Constructor 
+		- is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes
+getter/setter
+		- getter and setter are two conventional methods that are used for retrieving and updating value of a variable. By using getter and setter, the programmer can control how his important variables are accessed and updated in a correct manner, such as changing value of a variable within a specified range.
+	- Final, Finalize, Finally
+		- Final keyword is used to apply restrictions on class(immutable), method(cannot override) and variable(constant).
+		- Finally is a block that always executes when the try block exits even if an unexpected exception occurs.
+		- Finalize is a method to perform clean up processing just before object is garbage collected.
+	- equals/hashcode
+	- HashMap and HashSet use the hashcode value of an object to find out how the object would be stored in the collection, and subsequently hashcode is used to help locate the object in the collection. Hashing retrieval involves:
+		- First, find out the right bucket using hashCode().
+		- Secondly, search the bucket for the right element using equals()
+	- You must override hashCode() in every class that overrides equals(). Failure to do so will result in a violation of the general contract for Object.hashCode(), which will prevent your class from functioning properly in conjunction with all hash-based collections, including HashMap, HashSet, and Hashtable. 
+- What new things you have learned today?
+	- Application Architectures
+	- MVC Pattern
+	- ![image](https://user-images.githubusercontent.com/57826324/160984788-1aac3007-8ffd-42d6-bd0d-3a12bf5501e0.png)
+	- 3-tier Architecture
+ 		- Web Layer
+			- Communication with clients using network protocols like HTTP, websocket
+			- Input Validation 			
+			- Exception Handling		
+			- Authorization, access control
+		- Service Layer
+ 			- Business Logic
+ 			- Transaction Management
+ 		- Data Layer
+			-  Data Access, CRUD operations to DB
+	- SOA
+	- Service-Oriented Architecture
+		- Focusing on interaction and integration between independent services, usually using a service bus, SOAP or messaging system.
+ 		- ESB, In SOA, an enterprise service bus(ESB) acts as a center control of the communication and integration between the services.
+Popular product like MuleSoft ESB, Anypoint ESB
+	- Microservices
+	-  This is an architectural development style that allows building applications as a collection of small autonomous services developed for a business domain. It is a variant of structural style architecture that helps arrange applications as a loosely coupled service collection. The Microservice contains fine-grained services and lightweight protocol.
+- What is your learning plan tomorrow?
+	- review springboot restful demo
+	- review Design Patterns
