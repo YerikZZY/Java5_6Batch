@@ -851,3 +851,30 @@ Popular product like MuleSoft ESB, Anypoint ESB
 - What is your learning plan tomorrow?
 	- review springboot restful demo
 	- review Design Patterns
+
+## 3.30
+
+- What have you reviewed today?
+	- Design Pattens
+		- Singleton pattern is one of the simplest design patterns in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+		- ![image](https://user-images.githubusercontent.com/57826324/161197893-139c5d31-8e57-43ec-9683-5ef6207f3a95.png)
+		- Factory pattern is one of the most used design patterns in Java. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+		- ![image](https://user-images.githubusercontent.com/57826324/161197980-1a7a7005-4f78-4e86-8127-5d8a5275d547.png)
+		- Builder pattern builds a complex object using simple objects and using a step by step approach. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+		- ![image](https://user-images.githubusercontent.com/57826324/161198033-3251e9d4-740b-4c34-a717-2e9a8f72373c.png)
+		- In proxy pattern, a class represents functionality of another class. This type of design pattern comes under structural pattern. In proxy pattern, we create object having original object to interface its functionality to outer world.
+		- ![image](https://user-images.githubusercontent.com/57826324/161198135-e0a4c99a-c9ef-4546-8ef6-4eeb4f46e687.png)
+- What new things you have learned today?
+	- Microservices
+		- Split the application into tiny little services and then link them together using distributed communication, like http, service discovery, load balancing and api gateway. It is flexible. Each service could be developed, tested, deployed separately. It is loosely coupled. Services are communicating through the network. It is resilient. Elastically adding/removing nodes for each service won't cause issues to the overall application. Network failures can be recovered by using retry circuit breakers.
+	- pros and cons of Microservices
+	- ![image](https://user-images.githubusercontent.com/57826324/161196000-6db9abb5-1477-4d28-826f-7626c46b1b17.png)
+	- Eureka
+		- Eureka Server is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
+	- Client-side LB
+		- The Ribbon mainly provides client-side load balancing algorithms. It is a client-side load balancer that provides control over the behavior of HTTP and TCP client. The important point is that when we use Feign, the Ribbon also applies.
+	- Api Gateway
+		- An API gateway sits between external clients and the applications running in your datacenter and clouds. APIs (application programming interfaces) define how applications can communicate, without the client having to know where or how they are implemented. An API gateway validates incoming requests, routes them to the appropriate backend service based on defined policies, and then returns the appropriate result to the client.
+- What is your learning plan tomorrow?
+	- review and dive into content that covered this week
+	- review Spring MVC
