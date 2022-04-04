@@ -879,7 +879,7 @@ Popular product like MuleSoft ESB, Anypoint ESB
 	- review and dive into content that covered this week
 	- review Spring MVC
 
-## 3.31
+## 4.1
 
 - What have you reviewed today?
 	- Collections
