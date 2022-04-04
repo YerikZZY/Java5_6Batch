@@ -866,7 +866,7 @@ Popular product like MuleSoft ESB, Anypoint ESB
 		- ![image](https://user-images.githubusercontent.com/57826324/161198135-e0a4c99a-c9ef-4546-8ef6-4eeb4f46e687.png)
 - What new things you have learned today?
 	- Microservices
-		- Split the application into tiny little services and then link them together using distributed communication, like http, service discovery, load balancing and api gateway. It is flexible. Each service could be developed, tested, deployed separately. It is loosely coupled. Services are communicating through the network. It is resilient. Elastically adding/removing nodes for each service won't cause issues to the overall application. Network failures can be recovered by using retry circuit breakers.
+		- Split the application into tiny little services and then link them together using distributed communication, like http, service discovery, load balancing and api gateway. It is flexible. Each service could be developed, tested, deployed separately. It is loosely coupled. Services are communicating through the network. It is resilient. Elastically adding/removing nodes for each service won't cause issues to the overall application. Network failures can be 	 recovered by using retry circuit breakers.
 	- pros and cons of Microservices
 	- ![image](https://user-images.githubusercontent.com/57826324/161196000-6db9abb5-1477-4d28-826f-7626c46b1b17.png)
 	- Eureka
@@ -878,3 +878,55 @@ Popular product like MuleSoft ESB, Anypoint ESB
 - What is your learning plan tomorrow?
 	- review and dive into content that covered this week
 	- review Spring MVC
+
+## 3.31
+
+- What have you reviewed today?
+	- Collections
+	- List
+		- List is the most commonly used collection. ArrayList can be used in most of the scenarios.
+		- ArrayList
+		- LinkedList
+	- Queue
+		- FIFO
+		- PriorityQueue
+		- minHeap
+		- maxHeap
+
+	- Map
+		- All Maps are collections of Key-Value pairs. hashCode/equals methods of the Key class are used internally.
+		- HashMap
+		- LinkedHashMap
+		- TreeMap
+		- ConcurrentHashMap
+		- HashTable
+		- ![image](https://user-images.githubusercontent.com/57826324/161473561-8ff4ec18-fca9-4a40-b319-e586db3bb073.png)
+
+
+	- Set
+		- Similarly to map, set is actually using map's key as storage of the elements. All values are the same dummy object. So a set has the same feature as the map's key.
+		- HashSet
+		- TreeSet 
+- What new things you have learned today?
+	- Microservice
+	- Log Tracing
+		- Spring Cloud Sleuth is a framework to add the traceId and spanId into the HTTP Request Header, as well as the logs.
+		- Zipkin server is used for aggregation of the logs with traceId and spanId.
+	- Config Server
+		- Spring Config Server can be used for centralizing all the configuration files for each service, also for every environment(dev, test, staging, UAT, prod).
+	- Fault Tolerance
+		- Resilience4j is the recommended framework.
+		- Netflix Hystrix (Not used anymore)
+		- Resilience4j provides: circuit breaker, retry, ratelimiter, cache, bulkhead.
+	- Cloud/AWS
+		- EC2 - It provides user servers with CPU, memory, disk, network and OS.
+		- S3 - file storage using bucket and key to indicate the id. Fast and lots of space. 		
+		- SQS - Message Queue. Very simple one.
+		- SNS - Notification service, can send SMS, Email, SQS, HTTP etc.
+		- Lambda - It hosts functions which could be triggered by other services. It is serverless. Could be used for small tasks which don't need a dedicated server.
+ 		- RDS - RDBMS hosts, like Oracle, MySql, PostgreSQL, etc..
+		- ECS - Orchestration and management of Docker containers.
+		- ECR - Registry of Docker Images.
+- What is your learning plan tomorrow?
+	- Spring framework and web application review
+	- core Java
