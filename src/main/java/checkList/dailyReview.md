@@ -930,3 +930,37 @@ Popular product like MuleSoft ESB, Anypoint ESB
 - What is your learning plan tomorrow?
 	- Spring framework and web application review
 	- core Java
+
+## 4.4
+
+- What have you reviewed today?
+	- Exception
+	- ![image](https://user-images.githubusercontent.com/57826324/161676844-c6e5f896-429b-4799-899e-78687c09ed80.png)
+	- checked exception vs unchecked exception
+	- how to handle the exception
+	- try catch, throws
+	- how to customize exception
+	- ![image](https://user-images.githubusercontent.com/57826324/161676965-760f9305-2bee-4fee-a709-b609ab8c67c3.png)
+	- how to handle multiple exception
+	-  Serialization and deserialization
+		- Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
+		- ![image](https://user-images.githubusercontent.com/57826324/161677152-4a75ad2b-b157-4bd4-a33c-5955ef4e6d1f.png)
+		- The byte stream created is platform independent. So, the object serialized on one platform can be deserialized on a different platform. 
+- What new things you have learned today?
+	- Local Environment -> Dev -> Test/Integration -> UAT -> Production Environment -> Users
+	- GIT, Bitbucket, gitlab
+	- Team structure
+		- Manager 1
+		- Product Owner 1
+		- Scrum master 1
+		- Team Lead / Architect 1
+		- Developers - 5
+		- QA / SDET 1
+		- BA 1-2
+		- DBA 1
+		- Devops 1
+	- ![image](https://user-images.githubusercontent.com/57826324/161675805-aa0e74cc-9a04-4ea0-b35f-3934bcab8c6b.png)
+
+- What is your learning plan tomorrow?
+	- review interview questions for landing a project
+	- review core java and database
